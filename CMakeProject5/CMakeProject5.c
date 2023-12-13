@@ -6,9 +6,7 @@
 L p10(I d)
 {
 	L r = 1;
-
 	for (; d; d--) r *= 10;
-
 	R r;
 }
 
@@ -68,5 +66,14 @@ I main(I n, C **a)
 	Od(rol(567));
 	Od(ror(66343));
 	Od(d2t(89));
+	Od(d2t(0));
+	Od(d2t(1));
+	Od(d2t(2));
+	Od(d2t(3));
+	Od(t2d(0));
+	Od(t2d(1));
+	Od(t2d(2));
+	Od(t2d(3));
+
 	R 0;
 }
