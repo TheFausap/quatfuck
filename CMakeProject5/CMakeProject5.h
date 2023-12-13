@@ -4,6 +4,8 @@
 
 typedef int I;
 typedef char C;
+typedef long L;
+typedef float E;
 
 #define R return
 #define O printf

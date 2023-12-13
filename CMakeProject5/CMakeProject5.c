@@ -3,51 +3,70 @@
 
 #include "CMakeProject5.h"
 
-int d2t(int v)
+L p10(I d)
 {
-	int r = (v % 4) + 4;
-	int j = 10;
-	v /= 3;
+	L r = 1;
 
-	for(;v;j*=10,v/=3) r += ((v % 4) + 4)*j;
+	for (; d; d--) r *= 10;
 
-	return r;
+	R r;
 }
 
-int t2d(int t)
+I d2t(I v)
 {
-	int r = 0, rt = 0;
-	int j = 1;
+	I r = (v % 4) + 4;
+	I j = 10;
+	v /= 4;
+
+	for(;v;j*=10,v/=4) r += ((v % 4) + 4)*j;
+
+	R r;
+}
+
+I t2d(I t)
+{
+	I r = 0, rt = 0;
+	I j = 1;
 
 	for (;t;j*=4,t/=10) { rt = (t % 10) - 4; r += rt * j; }
 
-	return r;
+	R r;
 }
 
-int rol(int t)
+I rol(I t)
 {
-	int d = log(t) / log(10);
-	d++;
-	int l = 0, r = t;
+	I d = log(t) / log(10);
+	I l = 0, r = t, p = p10(d);
 	if (d > 1)
 	{
-		l = d % 10;
-		r -= l;
-		r += (l * d);
+		l = t % 10;
+		r /= 10;
+		r += (l * p);
 	}
 
-	return r;
+	R r;
+}
+
+I ror(I t)
+{
+	I d = log(t) / log(10);
+	I l = 0, r = t, p = p10(d);
+	if (d > 1)
+	{
+		l = t - (t % p);
+		r -= l;
+		l /= p;
+		r *= 10;
+		r += l;
+	}
+
+	R r;
 }
 
 I main(I n, C **a)
 {
-	Od(d2t(0));
-	Od(d2t(4));
-	Od(d2t(5));
-	Od(d2t(10));
-	Od(d2t(17339));
-	Od(t2d(56));
-	Od(t2d(rol(56)));
-	Od(t2d(3));
+	Od(rol(567));
+	Od(ror(66343));
+	Od(d2t(89));
 	R 0;
 }
