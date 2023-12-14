@@ -11,7 +11,7 @@ typedef short S;
 #define R return
 #define O printf
 #define Od(x) printf("%ld\n",x)
-#define Oc(x) printf("%c\n",x)
+#define Oc(x) printf("%c",x)
 
 #include <stdio.h>
 #include <stdlib.h>

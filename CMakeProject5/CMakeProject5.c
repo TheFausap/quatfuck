@@ -61,15 +61,55 @@ L ror(L t)
 	R r;
 }
 
-V rnd(V *a, I t)
+L r4(L s)
 {
-    if(t)
+    L r=444+(s%77777777), or=r, p=1;
+    I d = log(r) / log(10);
+    I l=0,i=d;
+    I *dd;
+    
+    dd=calloc(d+1,sizeof(dd));
+    
+    for(;d>=0;i--,d--,r/=10)
     {
-        for(int j=1;j<747;j++) { A[j]=32+((time(NULL)%100+A[j-1])%100); }
+        l=r%10;
+        if((l<4)||(l>7)) l=4+(l%8);
+        dd[i]=l;
+    }
+    for(i=log(or) / log(10);i>=0;i--,p*=10)
+    {
+        r+=dd[i]*p;
+    }
+    return r;
+}
+
+V rnd(I t)
+{
+    if(t==1)
+    {
+        for(int j=1;j<747;j++) { A[j]=(C)32+((clock()%100+A[j-1])%100); }
+    }
+    else if (t==4)
+    {
+        M[0]=r4(clock());
+        for(int j=1;j<65536;j++) { M[j]=r4(clock()+M[j-1]); }
     }
     else
     {
-        for(int j=1;j<747;j++) { B[j]=444+((time(NULL)%300+A[j-1])%300); }
+        for(int j=1;j<747;j++) { B[j]=(S)444+((clock()%300+A[j-1])%300); }
+    }
+}
+
+V rd(V)
+{
+    
+}
+
+V dmp(int t)
+{
+    if(t==4)
+    {
+        for(int i=0;i<65536;i++) Od(M[i]);
     }
 }
 
@@ -79,7 +119,7 @@ I main(I n, C **a)
     A = (C*)malloc(747);
     B = (S*)malloc(128);
     
-    rnd(A,1); rnd(B,0);
+    rnd(1); rnd(0); rnd(4);
     
     A[654]='A';A[444]='B';A[476]='C';
     A[655]='D';A[445]='E';A[477]='F';
@@ -123,5 +163,7 @@ I main(I n, C **a)
 	Od(t2d(2));
 	Od(t2d(3));
 	Od(t2d(77777777));
+    
+    
 	R 0;
 }
