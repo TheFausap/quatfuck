@@ -1,4 +1,4 @@
-﻿// CMakeProject5.cpp : Defines the entry point for the application.
+// CMakeProject5.cpp : Defines the entry point for the application.
 //
 
 #include "CMakeProject5.h"
@@ -10,9 +10,9 @@ L p10(I d)
 	R r;
 }
 
-I d2t(I v)
+L d2t(L v)
 {
-	I r = (v % 4) + 4;
+	L r = (v % 4) + 4;
 	I j = 10;
 	v /= 4;
 
@@ -21,9 +21,9 @@ I d2t(I v)
 	R r;
 }
 
-I t2d(I t)
+L t2d(L t)
 {
-	I r = 0, rt = 0;
+	L r = 0, rt = 0;
 	I j = 1;
 
 	for (;t;j*=4,t/=10) { rt = (t % 10) - 4; r += rt * j; }
@@ -31,10 +31,10 @@ I t2d(I t)
 	R r;
 }
 
-I rol(I t)
+L rol(L t)
 {
 	I d = log(t) / log(10);
-	I l = 0, r = t, p = p10(d);
+    L l = 0, r = t, p = p10(d);
 	if (d > 1)
 	{
 		l = t % 10;
@@ -45,10 +45,10 @@ I rol(I t)
 	R r;
 }
 
-I ror(I t)
+L ror(L t)
 {
 	I d = log(t) / log(10);
-	I l = 0, r = t, p = p10(d);
+    L l = 0, r = t, p = p10(d);
 	if (d > 1)
 	{
 		l = t - (t % p);
@@ -63,7 +63,24 @@ I ror(I t)
 
 I main(I n, C **a)
 {
-	M = calloc(65536, sizeof(M)); 
+	M = calloc(65536, sizeof(M));
+    A = (C*)malloc(747);
+    B = (I*)malloc(128);
+    A[654]='A';A[444]='B';A[476]='C';
+    A[655]='D';A[445]='E';A[477]='F';
+    A[656]='G';A[446]='H';A[544]='I';
+    A[657]='J';A[447]='K';A[545]='L';
+    A[664]='M';A[454]='N';A[546]='O';
+    A[665]='P';A[455]='Q';A[547]='R';
+    A[666]='S';A[456]='T';A[554]='U';
+    A[667]='V';A[457]='X';A[555]='Y';
+    A[674]='W';A[464]='Z';A[556]='!';
+    A[675]='?';A[465]='.';A[557]=',';
+    A[676]='$';A[466]='%';A[564]='/';
+    A[677]='*';A[467]='(';A[565]=')';
+    A[744]=':';A[474]=';';A[566]='[';
+    A[745]=']';A[475]='{';A[567]='}';
+    
 	Od(rol(567));
 	Od(ror(66343));
 	Od(d2t(89));

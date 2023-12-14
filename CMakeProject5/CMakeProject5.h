@@ -9,12 +9,15 @@ typedef float E;
 
 #define R return
 #define O printf
-#define Od(x) printf("%d\n",x)
-#define Os(x) printf("%s\n",x)
+#define Od(x) printf("%ld\n",x)
+#define Oc(x) printf("%c\n",x)
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
-int *M;
+L *M;
+I *B;
+C *A;
 
 // TODO: Reference additional headers your program requires here.
