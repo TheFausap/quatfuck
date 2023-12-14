@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		2B49C60C9E8D48E48D1D92A3 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DF07738AC8FF4316A8842AA3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				E720F9557D823968533B3CF5 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				5CEEF4E80C514C5F8F9147EF /* PBXTargetDependency */,
+				FCDC69903EA04224A238D437 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		9D8E4E50ED284B48A91C3544 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = DCB23FBA5AB04BDC9755BC0D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				4A5BB4A04F48586FA765D17C /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		BE0A70A0F08142B09BAD7301 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 8744D698E90B4BD0B59C5F48 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeLists.txt */; };
+		C5164FC4F8CC4945A5634025 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.h */ = {isa = PBXBuildFile; fileRef = B26FB184D0204C1FAF5C95B7 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.h */; };
+		DB015255AD434B449A523FFA /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.c */ = {isa = PBXBuildFile; fileRef = F1C9BE4B18474B73B726E5D1 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		347410FB74A34AB38490AD59 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		3FF68DC88BF64F59A55AD86B /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		9A6FE930DB9044D792FC948E /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		E847BE37D38944A7856D430B /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		5FC7886D0B074236B1CFE0F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD058E9B030A4281BA2907D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D8E4E50ED284B48A91C3544;
+			remoteInfo = ZERO_CHECK;
+		};
+		86C35A6572DF486FA79BFC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD058E9B030A4281BA2907D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F248FED3D34340A38DF44E0A;
+			remoteInfo = CMakeProject5;
+		};
+		8B33D29989774DC5BB048584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD058E9B030A4281BA2907D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D8E4E50ED284B48A91C3544;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4605B2C8A81A44A98772D28C /* CMakeProject5 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = CMakeProject5; sourceTree = BUILT_PRODUCTS_DIR; };
+		8744D698E90B4BD0B59C5F48 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeProject5/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B26FB184D0204C1FAF5C95B7 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = CMakeProject5.h; path = CMakeProject5/CMakeProject5.h; sourceTree = SOURCE_ROOT; };
+		D42D1BC578BA448991461A61 /* /Users/fausap/de/quatfuck/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		F1C9BE4B18474B73B726E5D1 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = CMakeProject5.c; path = CMakeProject5/CMakeProject5.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F67A84AB9CB9400DA86189ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44E01AC96FC04DBCB53B68C6 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				B26FB184D0204C1FAF5C95B7 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		5098E62EB5DF46A99313E96A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4605B2C8A81A44A98772D28C /* CMakeProject5 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70781C151BEF46808DC0D6F1 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				86D9343D976645C3963AB5CE /* CMake Rules */,
+				D42D1BC578BA448991461A61 /* /Users/fausap/de/quatfuck/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		86D9343D976645C3963AB5CE /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		A17815FD49464805A2DEE7F7 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				F1C9BE4B18474B73B726E5D1 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C94E4396A9574C179CF173B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE47814B84F640A8931BB2E4 = {
+			isa = PBXGroup;
+			children = (
+				70781C151BEF46808DC0D6F1 /* ALL_BUILD */,
+				F61DEFB63CB24C2CB160C95F /* CMakeProject5 */,
+				5098E62EB5DF46A99313E96A /* Products */,
+				C94E4396A9574C179CF173B9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F61DEFB63CB24C2CB160C95F /* CMakeProject5 */ = {
+			isa = PBXGroup;
+			children = (
+				A17815FD49464805A2DEE7F7 /* Source Files */,
+				44E01AC96FC04DBCB53B68C6 /* Header Files */,
+				8744D698E90B4BD0B59C5F48 /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeLists.txt */,
+			);
+			name = CMakeProject5;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F248FED3D34340A38DF44E0A /* CMakeProject5 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7C88EDA87C43407593E67894 /* Build configuration list for PBXNativeTarget "CMakeProject5" */;
+			buildPhases = (
+				B361E47999034BAF91CE92E6 /* Sources */,
+				F67A84AB9CB9400DA86189ED /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04CC22C0BD224D0FBD9D45AF /* PBXTargetDependency */,
+			);
+			name = CMakeProject5;
+			productName = CMakeProject5;
+			productReference = 4605B2C8A81A44A98772D28C /* CMakeProject5 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD058E9B030A4281BA2907D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1510;
+			};
+			buildConfigurationList = 3AE95085BDEE4CF98C4CBE67 /* Build configuration list for PBXProject "CMakeProject5" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				E847BE37D38944A7856D430B /* Debug */,
+				347410FB74A34AB38490AD59 /* Release */,
+				3FF68DC88BF64F59A55AD86B /* MinSizeRel */,
+				9A6FE930DB9044D792FC948E /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = CE47814B84F640A8931BB2E4;
+			projectDirPath = /Users/fausap/de/quatfuck;
+			projectRoot = "";
+			targets = (
+				2B49C60C9E8D48E48D1D92A3 /* ALL_BUILD */,
+				F248FED3D34340A38DF44E0A /* CMakeProject5 */,
+				9D8E4E50ED284B48A91C3544 /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		4A5BB4A04F48586FA765D17C /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/fausap/de/quatfuck/_build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  make -f /Users/fausap/de/quatfuck/_build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  make -f /Users/fausap/de/quatfuck/_build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  make -f /Users/fausap/de/quatfuck/_build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  make -f /Users/fausap/de/quatfuck/_build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		E720F9557D823968533B3CF5 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/fausap/de/quatfuck/_build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/fausap/de/quatfuck/_build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B361E47999034BAF91CE92E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB015255AD434B449A523FFA /* /Users/fausap/de/quatfuck/CMakeProject5/CMakeProject5.c */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04CC22C0BD224D0FBD9D45AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D8E4E50ED284B48A91C3544 /* ZERO_CHECK */;
+			targetProxy = 5FC7886D0B074236B1CFE0F5 /* PBXContainerItemProxy */;
+		};
+		5CEEF4E80C514C5F8F9147EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D8E4E50ED284B48A91C3544 /* ZERO_CHECK */;
+			targetProxy = 8B33D29989774DC5BB048584 /* PBXContainerItemProxy */;
+		};
+		FCDC69903EA04224A238D437 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F248FED3D34340A38DF44E0A /* CMakeProject5 */;
+			targetProxy = 86C35A6572DF486FA79BFC11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		054988C002C449A7981ED105 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		058A0503DDC04B96A06AD36F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/fausap/de/quatfuck/_build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		0CE5117974764CD2B38A76B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/fausap/de/quatfuck/_build/CMakeProject5/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CMakeProject5;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/fausap/de/quatfuck/_build/build/CMakeProject5.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		0E8E5E8466CE4E8189E07F7C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		1189EC4568E9406F905A426A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		23183620EC544E0B9CFD15EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		63505B90E2C84B85B2DEFF89 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/fausap/de/quatfuck/_build/build;
+			};
+			name = MinSizeRel;
+		};
+		7A4AA1B164994295B8317FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/fausap/de/quatfuck/_build/CMakeProject5/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = ("   ","$(inherited)");
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CMakeProject5;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/fausap/de/quatfuck/_build/build/CMakeProject5.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		81F5E47825CE47C582EEA2A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/fausap/de/quatfuck/_build/build;
+			};
+			name = Release;
+		};
+		872CD02D359841A18D39DDD1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/fausap/de/quatfuck/_build/CMakeProject5/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = ("    -DNDEBUG ","$(inherited)");
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CMakeProject5;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/fausap/de/quatfuck/_build/build/CMakeProject5.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		8B21CAC47A8443BD9CB62ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				MACOSX_DEPLOYMENT_TARGET = 14.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.2.sdk;
+				SYMROOT = /Users/fausap/de/quatfuck/_build/build;
+			};
+			name = Debug;
+		};
+		967011A20A334B1FA6B0F85A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		973B596E89C3452BBD0B8C99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		AB57CDA9B922426BB52F5D31 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AEEEF974533849419502D436 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		E363E16641D3408CA60C11F0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/fausap/de/quatfuck/_build/CMakeProject5/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = ("       -DNDEBUG ","$(inherited)");
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = CMakeProject5;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/fausap/de/quatfuck/_build/build/CMakeProject5.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AE95085BDEE4CF98C4CBE67 /* Build configuration list for PBXProject "CMakeProject5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B21CAC47A8443BD9CB62ECB /* Debug */,
+				81F5E47825CE47C582EEA2A0 /* Release */,
+				63505B90E2C84B85B2DEFF89 /* MinSizeRel */,
+				058A0503DDC04B96A06AD36F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7C88EDA87C43407593E67894 /* Build configuration list for PBXNativeTarget "CMakeProject5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4AA1B164994295B8317FFD /* Debug */,
+				0CE5117974764CD2B38A76B6 /* Release */,
+				872CD02D359841A18D39DDD1 /* MinSizeRel */,
+				E363E16641D3408CA60C11F0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DCB23FBA5AB04BDC9755BC0D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967011A20A334B1FA6B0F85A /* Debug */,
+				23183620EC544E0B9CFD15EA /* Release */,
+				AEEEF974533849419502D436 /* MinSizeRel */,
+				0E8E5E8466CE4E8189E07F7C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DF07738AC8FF4316A8842AA3 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				054988C002C449A7981ED105 /* Debug */,
+				973B596E89C3452BBD0B8C99 /* Release */,
+				1189EC4568E9406F905A426A /* MinSizeRel */,
+				AB57CDA9B922426BB52F5D31 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD058E9B030A4281BA2907D8 /* Project object */;
+}

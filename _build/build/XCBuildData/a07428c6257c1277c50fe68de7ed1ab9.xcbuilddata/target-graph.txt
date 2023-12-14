@@ -1,0 +1,4 @@
+Target dependency graph (2 targets)
+Target 'CMakeProject5' in project 'CMakeProject5'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'CMakeProject5'
+Target 'ZERO_CHECK' in project 'CMakeProject5' (no dependencies)

@@ -1,0 +1,3 @@
+/Users/fausap/de/quatfuck/_build/CMakeFiles/ALL_BUILD.dir
+/Users/fausap/de/quatfuck/_build/CMakeFiles/ZERO_CHECK.dir
+/Users/fausap/de/quatfuck/_build/CMakeProject5/CMakeFiles/CMakeProject5.dir

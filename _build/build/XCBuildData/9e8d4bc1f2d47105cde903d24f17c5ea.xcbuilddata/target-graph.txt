@@ -1,0 +1,7 @@
+Target dependency graph (3 targets)
+Target 'ALL_BUILD' in project 'CMakeProject5'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'CMakeProject5'
+➜ Explicit dependency on target 'CMakeProject5' in project 'CMakeProject5'
+Target 'CMakeProject5' in project 'CMakeProject5'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'CMakeProject5'
+Target 'ZERO_CHECK' in project 'CMakeProject5' (no dependencies)
