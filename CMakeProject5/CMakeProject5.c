@@ -33,7 +33,7 @@ L t2d(L t)
 
 L rol(L t)
 {
-	I d = log(t) / log(10);
+	I d = (I) log(t) / log(10);
     L l = 0, r = t, p = p10(d);
 	if (d > 1)
 	{
@@ -47,7 +47,7 @@ L rol(L t)
 
 L ror(L t)
 {
-	I d = log(t) / log(10);
+	I d = (I) log(t) / log(10);
     L l = 0, r = t, p = p10(d);
 	if (d > 1)
 	{
@@ -76,7 +76,7 @@ L r4(L s)
         if((l<4)||(l>7)) l=4+(l%8);
         dd[i]=l;
     }
-    for(i=log(or) / log(10);i>=0;i--,p*=10)
+    for(i=(I)log(or) / log(10);i>=0;i--,p*=10)
     {
         r+=dd[i]*p;
     }
@@ -113,11 +113,19 @@ V dmp(int t)
     }
 }
 
+V i0(V)
+{
+    M = calloc(65536, sizeof(M));
+    A = calloc(747,sizeof(A));
+    B = calloc(128,sizeof(B));
+    if (!A)EXIT;
+    if (!B)EXIT;
+    if (!M)EXIT;
+}
+
 I main(I n, C **a)
 {
-	M = calloc(65536, sizeof(M));
-    A = (C*)malloc(747);
-    B = (S*)malloc(128);
+    i0();
     
     rnd(1); rnd(0); rnd(4);
     
@@ -153,6 +161,8 @@ I main(I n, C **a)
     
 	Od(rol(567));
 	Od(ror(66343));
+    Od(t2d(66343));
+
 	Od(d2t(89));
 	Od(d2t(0));
 	Od(d2t(1));
@@ -164,6 +174,7 @@ I main(I n, C **a)
 	Od(t2d(3));
 	Od(t2d(77777777));
     
-    
+    O("```````\n");
+    //free(M); free(A); free(B);
 	R 0;
 }

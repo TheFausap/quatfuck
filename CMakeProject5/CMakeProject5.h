@@ -12,6 +12,7 @@ typedef short S;
 #define O printf
 #define Od(x) printf("%ld\n",x)
 #define Oc(x) printf("%c",x)
+#define EXIT {printf("!MEM\n");exit(4);}
 
 #include <stdio.h>
 #include <stdlib.h>
