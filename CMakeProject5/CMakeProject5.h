@@ -1,11 +1,12 @@
 // CMakeProject5.h : Include file for standard system include files,
 // or project specific include files.
 
-
+typedef void V;
 typedef int I;
 typedef char C;
 typedef long L;
 typedef float E;
+typedef short S;
 
 #define R return
 #define O printf
@@ -15,9 +16,10 @@ typedef float E;
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 L *M;
-I *B;
+S *B;
 C *A;
 
 // TODO: Reference additional headers your program requires here.
