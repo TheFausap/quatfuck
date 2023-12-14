@@ -63,6 +63,7 @@ I ror(I t)
 
 I main(I n, C **a)
 {
+	M = calloc(65536, sizeof(M)); 
 	Od(rol(567));
 	Od(ror(66343));
 	Od(d2t(89));
@@ -74,6 +75,6 @@ I main(I n, C **a)
 	Od(t2d(1));
 	Od(t2d(2));
 	Od(t2d(3));
-
+	Od(t2d(77777777));
 	R 0;
 }

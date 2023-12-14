@@ -14,4 +14,6 @@ typedef float E;
 #include <stdio.h>
 #include <math.h>
 
+int *M;
+
 // TODO: Reference additional headers your program requires here.
