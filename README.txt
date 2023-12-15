@@ -38,8 +38,9 @@ m<n - copy (n) in m
 
 / - jump [memory address in I4 little endian]
 
-/ - divide the supplied register by 4 (this converges/oscillates to/around a couple of values after a specific amount of passes. 
-TODO: understand if there is an algorithm to identify the number of passes!!!
+/ - divide the supplied register by 4 and normalise the result
+    N.B.: this converges/oscillates to/around a couple of values after a specific amount of passes. 
+    TODO: understand if there is an algorithm to identify the number of passes!!!
 
 . - print the memory content or registry
 
@@ -54,7 +55,7 @@ TODO: understand if there is an algorithm to identify the number of passes!!!
 - - sub to registry memory content
 
 ~ - randomize! generate an I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
-You don't need to do that... but it could be useful someday.
+    You don't need to do that... but it could be useful someday.
 
 ` - stop/end/halt - performs a dump of the first 128 locations of memory. Numbers are displayed in big-endian format.
 --- 
