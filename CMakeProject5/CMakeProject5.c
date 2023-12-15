@@ -61,8 +61,33 @@ L ror(L t)
 	R r;
 }
 
+L n2(L s)
+/* half-normalise to I4 */
+{
+    L r=s, or=r, p=1;
+    I d = log(r) / log(10);
+    I l=0,i=d;
+    I *dd;
+    
+    dd=calloc(d+1,sizeof(dd));
+    
+    for(;d>=0;i--,d--,r/=10)
+    {
+        l=r%10;
+        if(l<4) l=4+(l%8);
+        dd[i]=l;
+    }
+    r=0;
+    i = log(or)/log(10);
+    for(;i>=0;i--,p*=10)
+    {
+        r+=dd[i]*p;
+    }
+    return r;
+}
+
 L n4(L s)
-/* normalize to I4 */
+/* normalise to I4 */
 {
     L r=s, or=r, p=1;
     I d = log(r) / log(10);
@@ -161,6 +186,36 @@ V rdiv4(C c)
             *R3/=4;
             *R3=n4(*R3);
             break;
+	case '%':
+	    *R0/=4;
+	    break;
+	case '^':
+	    *R1/=4;
+	    break;
+	case '&':
+	    *R2/=4;
+	    break;
+	case '*':
+	    *R3/=4;
+	    break;
+	case '(':
+	    *R0/=4;
+	    *R0=n2(*R0);
+	    break;
+	case ')':
+	    *R1/=4;
+	    *R1=n2(*R1);
+	    break;
+	case '_':
+	    *R2/=4;
+	    *R2=n2(*R2);
+	    break;
+	case '+':
+	    *R3/=4;
+	    *R3=n2(*R3);
+	    break;
+	default:
+	    break;
     }
 }
 
@@ -276,8 +331,16 @@ V rd(FILE*f)
                     case '@':
                     case '#':
                     case '$':
+		    case '%':
+		    case '^':
+		    case '&':
+		    case '*':
+	            case '(':
+		    case ')':
+		    case '_':
+		    case '+':
                         rdiv4(c);
-                        BR;
+                        break;
                     default:
                         ungetc(c,f);
                         PC=t2d(getn(f));
@@ -407,7 +470,7 @@ I main(I n, C **a)
     if(n>1) {fi=fopen(a[1],"r+");if(fi)rd(fi);fclose(fi);}
     
     //dmp(4);
-    dmp(3);
+    //dmp(3);
     
     O("```````\n");
     
