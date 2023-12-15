@@ -48,7 +48,7 @@ m<n - copy (n) in m
 ~ - randomize! generate a I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
 You don't really need to do that... but it could be useful someday.
 
-` - stop/end/halt
+` - stop/end/halt - performs a dump of first 128 location of memory. Numbers are displayed in big endian format.
 --- 
 
 ASC4
