@@ -33,7 +33,7 @@ m<n - copy (n) in m
 
 / - divide register by 4
 
-. - print the memory content
+. - print the memory content or registry
 
 , - print the ASC4 value on the screen
 
