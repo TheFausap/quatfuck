@@ -31,7 +31,8 @@ m<n - copy (n) in m
 
 / - jump [memory address in I4 little endian]
 
-/ - divide the supplied register by 4 (this creates a sort of converge/oscillate after a specific amount of passes. TODO: understand if there is an algorithm to identify the number of passes!!!
+/ - divide the supplied register by 4 (this converges/oscillates to/around a couple of values after a specific amount of passes. 
+TODO: understand if there is an algorithm to identify the number of passes!!!
 
 . - print the memory content or registry
 
