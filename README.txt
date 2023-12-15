@@ -14,22 +14,38 @@ positives numbers starts with 4|5|6|7
 
 
 !@#$ - write in 4 registers resp.
+
 [n]m - repeat m times n
+
 > - increment a register
+
 < - decrement a register
+
 m>n - copy (m) in n
+
 m<n - copy (n) in m
-\ - swap registers
+
+\ - swap adjacent registers
+
 / - jump
+
 / - divide register by 4
+
 . - print the memory content
+
 , - print the ASC4 value on the screen
+
 } - rotate 1 pos right
+
 { - rotate 1 pos left
+
 + - add to registry memory content
+
 - - sub to registry memory content
+
 ~ - randomize! generate a I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
 You don't really need to do that... but it could be useful someday.
+
 ` - stop/end/halt
 --- 
 
