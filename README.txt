@@ -1,13 +1,16 @@
 # QUATFUCK
 
-numbers in base 4 + 4 (I4)
-each line is a memory address
+numbers in base 4 + 4 (named I4)
+each line is a memory address, but you can use space, so each space define a new memory location
 ascii are converted to ASC4 and put in memory
 
 memory 64k [4-77777777]
+memory content is filled with random numbers at the start
 
 0,1,2,3 - put 0,1,2,3 in memory 
 (constant negative numbers, 0 is 0)
+negative numbers starts with 1|2|3
+positives numbers starts with 4|5|6|7
 
 
 !@#$ - write in 4 registers resp.
@@ -25,7 +28,7 @@ m<n - copy (n) in m
 { - rotate 1 pos left
 + - add to registry memory content
 - - sub to registry memory content
-~ - randomize! generate a I4 number
+~ - randomize! generate a I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too).
 ` - stop/end/halt
 --- 
 
