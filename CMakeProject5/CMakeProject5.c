@@ -114,7 +114,7 @@ V rnd(I t)
 {
     if(t==1)
     {
-        for(int j=1;j<747;j++) { A[j]=(C)32+((time(NULL)%100+A[j-1])%100); }
+        for(int j=1;j<778;j++) { A[j]=(C)32+((time(NULL)%100+A[j-1])%100); }
     }
     else if (t==4)
     {
@@ -123,17 +123,17 @@ V rnd(I t)
     }
     else
     {
-        for(int j=1;j<747;j++) { B[j]=(S)444+((time(NULL)%300+A[j-1])%300); }
+        for(int j=1;j<128;j++) { B[j]=(S)444+((time(NULL)%300+A[j-1])%300); }
     }
 }
 
 L getn(FILE*f)
 {
     /* numbers are written in little endian (?) format */
-    C c;
+    wchar_t c;
     L r=0;
     L p=1;
-    while((c=fgetc(f))!='\n')
+    while((c=fgetwc(f))!='\n')
     {
         r+=(c-'0')*p;
         p*=10;
