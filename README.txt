@@ -30,9 +30,9 @@ N.B. Numbers or memory locations are written in little-endian format!
 
 < - decrement a register
 
-m>n - copy (m) in n
+>rn - copy registry value in n
 
-m<n - copy (n) in m
+<rn - copy (n) in registry
 
 \ - swap adjacent registers
 
@@ -50,9 +50,9 @@ m<n - copy (n) in m
 
 { - rotate 1 pos left
 
-+ - add to registry memory content
++ - add to registry memory content. store result in the registry.
 
-- - sub to registry memory content
+- - sub to registry memory content. store result in the registry.
 
 ~ - randomise! generate an I4 positive number, using as a seed a number (read as a decimal) in memory (a random number). 
     You don't need to do that... but it could be useful someday.
