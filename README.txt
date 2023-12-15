@@ -13,10 +13,10 @@ memory content is filled with random numbers at the start
 (constant negative numbers, 0 is 0)
 negative numbers start with 1|2|3
 positives numbers starts with 4|5|6|7
-All the math operations are applied to the numbers as decimals. Then, the result is "normalized" to I4.
-WIP: Could be the "un-normalized" version useful? Numbers with (8,9) could be something like "exceptional" numbers. 
+All the math operations are applied to the numbers as decimals. Then, the result is "normalised" to I4.
+WIP: Could be the "un-normalised" version useful? Numbers with (8,9) could be something like "exceptional" numbers. 
      Exceptional numbers live only in memory as a result of operations. They cannot be stored as it is, or printed.
-WIP: Could be the "half-normalized" number useful? This preserves the sign, normalizing only the upper part (8,9).
+WIP: Could be the "half-normalised" number useful? This preserves the sign, normalizing only the upper part (8,9).
 
 ### COMMANDS
 
@@ -39,7 +39,7 @@ m<n - copy (n) in m
 / - jump [memory address in I4 little endian]
 
 / - divide the supplied register by 4 and normalise the result
-    N.B.: this converges/oscillates to/around a couple of values after a specific amount of passes. 
+    N.B.: the normalised result converges/oscillates to/around a couple of values after a specific amount of passes. 
     TODO: understand if there is an algorithm to identify the number of passes!!!
 
 . - print the memory content or registry
