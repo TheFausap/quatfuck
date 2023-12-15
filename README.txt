@@ -1,7 +1,7 @@
 # QUATFUCK
 
 numbers in base 4 + 4 (named I4)
-each line is a memory address, but you can use space, so each space define a new memory location (after the space itself)
+each line is a memory address, you can use space to improve readability.
 ascii are converted to ASC4 and put in memory
 
 memory 64k [4-77777777]
@@ -9,11 +9,11 @@ memory content is filled with random numbers at the start
 
 0,1,2,3 - put 0,1,2,3 in memory 
 (constant negative numbers, 0 is 0)
-negative numbers starts with 1|2|3
+negative numbers start with 1|2|3
 positives numbers starts with 4|5|6|7
 
 ### COMMANDS
-N.B. Number are written in little endian format!
+N.B. Numbers or memory locations are written in little-endian format!
 
 !@#$ - write in 4 registers resp.
 
@@ -31,7 +31,7 @@ m<n - copy (n) in m
 
 / - jump [memory address in I4 little endian]
 
-/ - divide register by 4
+/ - divide the supplied register by 4 (this creates a sort of attractor after a specific amount of passes. TODO: understand if there is an algorithm to identify the number of passes!!!
 
 . - print the memory content or registry
 
@@ -45,10 +45,10 @@ m<n - copy (n) in m
 
 - - sub to registry memory content
 
-~ - randomize! generate a I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
-You don't really need to do that... but it could be useful someday.
+~ - randomize! generate an I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
+You don't need to do that... but it could be useful someday.
 
-` - stop/end/halt - performs a dump of first 128 location of memory. Numbers are displayed in big endian format.
+` - stop/end/halt - performs a dump of the first 128 locations of memory. Numbers are displayed in big-endian format.
 --- 
 
 ASC4
