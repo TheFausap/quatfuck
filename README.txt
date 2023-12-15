@@ -29,7 +29,7 @@ m<n - copy (n) in m
 
 \ - swap adjacent registers
 
-/ - jump
+/ - jump [memory address in I4 little endian]
 
 / - divide register by 4
 
