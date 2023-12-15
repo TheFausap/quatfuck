@@ -61,9 +61,10 @@ L ror(L t)
 	R r;
 }
 
-L r4(L s)
+L n4(L s)
+/* normalize to I4 */
 {
-    L r=444+(s%77777777), or=r, p=1;
+    L r=s, or=r, p=1;
     I d = log(r) / log(10);
     I l=0,i=d;
     I *dd;
@@ -76,7 +77,33 @@ L r4(L s)
         if((l<4)||(l>7)) l=4+(l%8);
         dd[i]=l;
     }
-    for(i=(I)log(or) / log(10);i>=0;i--,p*=10)
+    r=0;
+    i = log(or)/log(10);
+    for(;i>=0;i--,p*=10)
+    {
+        r+=dd[i]*p;
+    }
+    return r;
+}
+
+L r4(L s)
+{
+    srand((unsigned int)s);
+    L r=444+(s%77777777)+rand(), or=r, p=1;
+    I d = log(r) / log(10);
+    I l=0,i=d;
+    I *dd;
+    
+    dd=calloc(d+1,sizeof(dd));
+    
+    for(;d>=0;i--,d--,r/=10)
+    {
+        l=r%10;
+        if((l<4)||(l>7)) l=4+(l%8);
+        dd[i]=l;
+    }
+    i = log(or) / log(10);
+    for(;i>=0;i--,p*=10)
     {
         r+=dd[i]*p;
     }
@@ -87,48 +114,241 @@ V rnd(I t)
 {
     if(t==1)
     {
-        for(int j=1;j<747;j++) { A[j]=(C)32+((clock()%100+A[j-1])%100); }
+        for(int j=1;j<747;j++) { A[j]=(C)32+((time(NULL)%100+A[j-1])%100); }
     }
     else if (t==4)
     {
-        M[0]=r4(clock());
-        for(int j=1;j<65536;j++) { M[j]=r4(clock()+M[j-1]); }
+        M[0]=r4(time(NULL));
+        for(int j=1;j<65536;j++) { M[j]=r4(time(NULL)+M[j-1]); }
     }
     else
     {
-        for(int j=1;j<747;j++) { B[j]=(S)444+((clock()%300+A[j-1])%300); }
+        for(int j=1;j<747;j++) { B[j]=(S)444+((time(NULL)%300+A[j-1])%300); }
     }
 }
 
-V rd(V)
+L getn(FILE*f)
 {
-    
+    /* numbers are written in little endian (?) format */
+    C c;
+    L r=0;
+    L p=1;
+    while((c=fgetc(f))!='\n')
+    {
+        r+=(c-'0')*p;
+        p*=10;
+    }
+    return r;
+}
+
+V rdiv4(C c)
+{
+    switch(c)
+    {
+        case '!':
+            *R0/=4;
+            *R0=n4(*R0);
+            break;
+        case '@':
+            *R1/=4;
+            *R1=n4(*R1);
+            break;
+        case '#':
+            *R2/=4;
+            *R2=n4(*R2);
+            break;
+        case '$':
+            *R3/=4;
+            *R3=n4(*R3);
+            break;
+    }
+}
+
+V rd(FILE*f)
+{
+    I PC=0;
+    wchar_t c;
+#define M(x) M[PC]=x
+#define BR PC++;break
+    while((c=fgetwc(f))!=EOF)
+    {
+        switch(c)
+        {
+            case '0':
+                M(0);
+                BR;
+            case '1':
+                M(t2d(1));
+                BR;
+            case '2':
+                M(t2d(2));
+                BR;
+            case '3':
+                M(t2d(3));
+                BR;
+            case '~':
+                M(r4(M[PC]));
+                BR;
+            case '!':
+                *R0=getn(f);
+                break;
+            case '@':
+                *R1=getn(f);
+                break;
+            case '#':
+                *R2=getn(f);
+                break;
+            case '$':
+                *R3=getn(f);
+                break;
+            case 'A':
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'E':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'I':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'O':
+            case 'P':
+            case 'Q':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'U':
+            case 'V':
+            case 'Y':
+            case 'X':
+            case 'W':
+            case 'Z':
+            case '%':
+            case '*':
+            case '(':
+            case ')':
+            case ':':
+            case ';':
+            case '[':
+            case ']':
+            case '?':
+                M(B[c]);
+                BR;
+            case '|':
+                M(B['/']);
+                BR;
+            case L'¡':
+                M(B['!']);
+                BR;
+            case L'…':
+                M(B['.']);
+                BR;
+            case L'∞':
+                M(B[',']);
+                BR;
+            case L'¢':
+                M(B['$']);
+                BR;
+            case L'•':
+                M(B['{']);
+                BR;
+            case L'·':
+                M(B['}']);
+                BR;
+            case L'ø':
+                M(B[' ']);
+                BR;
+            case '/':
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                    case '@':
+                    case '#':
+                    case '$':
+                        rdiv4(c);
+                        BR;
+                    default:
+                        PC=(I)getn(f);
+                        break;
+                }
+                break;
+            case '.':
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                        Od(*R0);
+                        break;
+                    case '@':
+                        Od(*R1);
+                        break;
+                    case '#':
+                        Od(*R2);
+                        break;
+                    case '$':
+                        Od(*R3);
+                        break;
+                    default:
+                        Od(M[getn(f)]);
+                        break;
+                }
+                break;
+            case '`':
+                R;
+            case '\n':
+            case ' ':
+                break;
+            default:
+                break;
+        }
+    }
 }
 
 V dmp(int t)
 {
-    if(t==4)
+    O("\n");
+    switch(t)
     {
-        for(int i=0;i<65536;i++) Od(M[i]);
+        case 4:
+            for(int i=0;i<128;i++) Od(M[i]);
+            break;
+        case 3:
+            O("R0: %ld\t[%ld]\n",*R0,t2d(*R0));
+            O("R1: %ld\t[%ld]\n",*R1,t2d(*R1));
+            O("R2: %ld\t[%ld]\n",*R2,t2d(*R2));
+            O("R3: %ld\t[%ld]\n",*R3,t2d(*R3));
+            break;
+        default:
+            break;
     }
 }
 
 V i0(V)
 {
-    M = calloc(65536, sizeof(M));
-    A = calloc(747,sizeof(A));
+    M = calloc(65536,sizeof(M));
+    A = calloc(778,sizeof(A));
     B = calloc(128,sizeof(B));
     if (!A)EXIT;
     if (!B)EXIT;
     if (!M)EXIT;
-}
-
-I main(I n, C **a)
-{
-    i0();
+    R0 = calloc(1,sizeof(R0));
+    R1 = calloc(1,sizeof(R0));
+    R2 = calloc(1,sizeof(R0));
+    R3 = calloc(1,sizeof(R0));
+    if (!R0)EXIT;
+    if (!R1)EXIT;
+    if (!R2)EXIT;
+    if (!R3)EXIT;
+    
+    setlocale(LC_ALL,"");
     
     rnd(1); rnd(0); rnd(4);
-    
+
     A[654]='A';A[444]='B';A[476]='C';
     A[655]='D';A[445]='E';A[477]='F';
     A[656]='G';A[446]='H';A[544]='I';
@@ -143,6 +363,7 @@ I main(I n, C **a)
     A[677]='*';A[467]='(';A[565]=')';
     A[744]=':';A[474]=';';A[566]='[';
     A[745]=']';A[475]='{';A[567]='}';
+    A[777]=' ';
     
     B['A']=654;B['B']=444;B['C']=476;
     B['D']=655;B['E']=445;B['F']=477;
@@ -158,23 +379,25 @@ I main(I n, C **a)
     B['*']=677;B['(']=467;B[')']=565;
     B[':']=744;B[';']=474;B['[']=566;
     B[']']=745;B['{']=475;B['}']=567;
-    
-	Od(rol(567));
-	Od(ror(66343));
-    Od(t2d(66343));
+    B[' ']=777;
+}
 
-	Od(d2t(89));
-	Od(d2t(0));
-	Od(d2t(1));
-	Od(d2t(2));
-	Od(d2t(3));
-	Od(t2d(0));
-	Od(t2d(1));
-	Od(t2d(2));
-	Od(t2d(3));
-	Od(t2d(77777777));
+I main(I n, C **a)
+{
+    FILE*fi;
+    
+    i0();
+    
+    
+    
+    
+    
+    if(n>1) {fi=fopen(a[1],"r+");if(fi)rd(fi);fclose(fi);}
+    
+    //dmp(4);
+    dmp(3);
     
     O("```````\n");
-    //free(M); free(A); free(B);
+    
 	R 0;
 }
