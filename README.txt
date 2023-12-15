@@ -1,7 +1,7 @@
 # QUATFUCK
 
 numbers in base 4 + 4 (named I4)
-each line is a memory address, but you can use space, so each space define a new memory location
+each line is a memory address, but you can use space, so each space define a new memory location (after the space itself)
 ascii are converted to ASC4 and put in memory
 
 memory 64k [4-77777777]
@@ -11,7 +11,6 @@ memory content is filled with random numbers at the start
 (constant negative numbers, 0 is 0)
 negative numbers starts with 1|2|3
 positives numbers starts with 4|5|6|7
-
 
 !@#$ - write in 4 registers resp.
 
