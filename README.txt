@@ -7,12 +7,16 @@ ascii are converted to ASC4 and put in memory
 memory 64k [4-77777777]
 memory content is filled with random numbers at the start
 
+### ARITHMETIC
+
 0,1,2,3 - put 0,1,2,3 in memory 
 (constant negative numbers, 0 is 0)
 negative numbers start with 1|2|3
 positives numbers starts with 4|5|6|7
+All the math operations are applied to the numbers as decimals. Then, the result is "normalized" to I4.
 
 ### COMMANDS
+
 N.B. Numbers or memory locations are written in little-endian format!
 
 !@#$ - write in 4 registers resp.
