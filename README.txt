@@ -15,7 +15,7 @@ negative numbers start with 1|2|3
 positives numbers starts with 4|5|6|7
 All the math operations are applied to the numbers as decimals. Then, the result is "normalised" to I4.
 WIP: Could be the "un-normalised" version useful? Numbers with (8,9) could be something like "exceptional" numbers. 
-     Exceptional numbers live only in memory as a result of operations. They cannot be stored as it is, or printed.
+     Exceptional numbers live only in the registries as a result of operations. They cannot be stored as it is in memory.
 WIP: Could be the "half-normalised" number useful? This preserves the sign, normalizing only the upper part (8,9).
 
 ### COMMANDS
