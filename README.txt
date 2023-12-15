@@ -12,6 +12,9 @@ memory content is filled with random numbers at the start
 negative numbers starts with 1|2|3
 positives numbers starts with 4|5|6|7
 
+### COMMANDS
+N.B. Number are written in little endian format!
+
 !@#$ - write in 4 registers resp.
 
 [n]m - repeat m times n
