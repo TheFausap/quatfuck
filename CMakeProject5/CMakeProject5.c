@@ -262,6 +262,12 @@ V rd(FILE*f)
             case L'ø':
                 M(B[' ']);
                 BR;
+            case L'®':
+                M(B['\n']);
+                BR;
+            case L'†':
+                M(B['\t']);
+                BR;
             case '/':
                 c=fgetwc(f);
                 switch(c)
@@ -273,7 +279,8 @@ V rd(FILE*f)
                         rdiv4(c);
                         BR;
                     default:
-                        PC=(I)getn(f);
+                        ungetc(c,f);
+                        PC=t2d(getn(f));
                         break;
                 }
                 break;
@@ -294,10 +301,14 @@ V rd(FILE*f)
                         Od(*R3);
                         break;
                     default:
-                        Od(M[getn(f)]);
+                        ungetc(c,f);
+                        Od(M[t2d(getn(f))]);
                         break;
                 }
                 break;
+            case ',':
+                Oc(M[PC]);
+                BR;
             case '`':
                 R;
             case '\n':
@@ -363,7 +374,7 @@ V i0(V)
     A[677]='*';A[467]='(';A[565]=')';
     A[744]=':';A[474]=';';A[566]='[';
     A[745]=']';A[475]='{';A[567]='}';
-    A[777]=' ';
+    A[777]=' ';A[776]='\n';A[775]='\t';
     
     B['A']=654;B['B']=444;B['C']=476;
     B['D']=655;B['E']=445;B['F']=477;
@@ -380,6 +391,7 @@ V i0(V)
     B[':']=744;B[';']=474;B['[']=566;
     B[']']=745;B['{']=475;B['}']=567;
     B[' ']=777;
+    B['\n']=776;B[L'\t']=775;
 }
 
 I main(I n, C **a)
