@@ -54,7 +54,7 @@ m<n - copy (n) in m
 
 - - sub to registry memory content
 
-~ - randomize! generate an I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
+~ - randomise! generate an I4 positive number, using as a seed a number (read as a decimal) in memory (a random number). 
     You don't need to do that... but it could be useful someday.
 
 ` - stop/end/halt - performs a dump of the first 128 locations of memory. Numbers are displayed in big-endian format.
