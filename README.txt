@@ -14,7 +14,8 @@ memory content is filled with random numbers at the start
 negative numbers start with 1|2|3
 positives numbers starts with 4|5|6|7
 All the math operations are applied to the numbers as decimals. Then, the result is "normalized" to I4.
-WIP: Could be the "un-normalized" version useful?
+WIP: Could be the "un-normalized" version useful? 
+WIP: Could be the "half-normalized" number useful? This preserves the sign, normalizing only the upper part (8,9).
 
 ### COMMANDS
 
