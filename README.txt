@@ -28,7 +28,8 @@ m<n - copy (n) in m
 { - rotate 1 pos left
 + - add to registry memory content
 - - sub to registry memory content
-~ - randomize! generate a I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). You don't really need to do that... but it      could be useful someday.
+~ - randomize! generate a I4 positive number, using as a seed a number (read as a decimal) in memory (it's a random number too). 
+You don't really need to do that... but it could be useful someday.
 ` - stop/end/halt
 --- 
 
