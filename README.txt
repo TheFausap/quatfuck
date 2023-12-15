@@ -36,7 +36,9 @@ N.B. Numbers or memory locations are written in little-endian format!
 
 \ - swap adjacent registers
 
-/ - jump [memory address in I4 little endian]
+\ - conditional (-+=) jump: resp. less than 0, more than 0, equal to 0
+
+/ - jump [memory address in I4 little endian] (unconditional)
 
 / - divide the supplied register by 4 and normalise the result
     N.B.: the normalised result converges/oscillates to/around a couple of values after a specific amount of passes. 
