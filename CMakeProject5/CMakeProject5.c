@@ -426,6 +426,28 @@ V rd(FILE*f)
 			break;
 		}
 		break;
+	    case '>':
+		c=fgetwc(f);
+		switch(c)
+		{
+		    case '!':
+		    	*R0+=5;
+			break;
+		    case '@':
+			*R1+=5;
+			break;
+		    case '#':
+			*R2+=5;
+			break;
+		    case '$':
+			*R3+=5;
+			break;
+		    default:
+			ungetc(c,f);
+			M[getn(f)]=*R3;
+			BR;
+		}
+		break;
             case '`':
                 R;
             case '\n':
