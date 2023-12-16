@@ -372,6 +372,36 @@ V rd(FILE*f)
             case ',':
                 Oc(M[PC]);
                 BR;
+	    case '}':
+		M(ror(M[PC]));
+		BR;
+	    case '{':
+		M(rol(M[PC]));
+		BR;
+            case '+':
+		c=fgetwc(f);
+		switch(c)
+		{
+		     case '!':
+			*R0+=M[PC];
+			*R0=n4(*R0);
+			BR;
+		     case '@':
+			*R1+=M[PC];
+			*R1=n4(*R1);
+			BR;
+		     case '#':
+			*R2+=M[PC];
+			*R2=n4(*R2);
+			BR;
+		     case '$':
+			*R3+=M[PC];
+			*R3=n4(*R3);
+			BR;
+		     default:
+			break;
+		}
+		break;
             case '`':
                 R;
             case '\n':
