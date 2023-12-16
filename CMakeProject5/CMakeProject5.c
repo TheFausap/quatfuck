@@ -219,6 +219,25 @@ V rdiv4(C c)
     }
 }
 
+V dmp(int t)
+{
+    O("\n");
+    switch(t)
+    {
+        case 4:
+            for(int i=0;i<128;i++) Od(M[i]);
+            break;
+        case 3:
+            O("R0: %ld\t[%ld]\n",*R0,t2d(*R0));
+            O("R1: %ld\t[%ld]\n",*R1,t2d(*R1));
+            O("R2: %ld\t[%ld]\n",*R2,t2d(*R2));
+            O("R3: %ld\t[%ld]\n",*R3,t2d(*R3));
+            break;
+        default:
+            break;
+    }
+}
+
 V rd(FILE*f)
 {
     I PC=0;
@@ -509,24 +528,7 @@ V rd(FILE*f)
     }
 }
 
-V dmp(int t)
-{
-    O("\n");
-    switch(t)
-    {
-        case 4:
-            for(int i=0;i<128;i++) Od(M[i]);
-            break;
-        case 3:
-            O("R0: %ld\t[%ld]\n",*R0,t2d(*R0));
-            O("R1: %ld\t[%ld]\n",*R1,t2d(*R1));
-            O("R2: %ld\t[%ld]\n",*R2,t2d(*R2));
-            O("R3: %ld\t[%ld]\n",*R3,t2d(*R3));
-            break;
-        default:
-            break;
-    }
-}
+
 
 V i0(V)
 {
