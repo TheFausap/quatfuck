@@ -186,36 +186,36 @@ V rdiv4(C c)
             *R3/=4;
             *R3=n4(*R3);
             break;
-	case '%':
-	    *R0/=4;
-	    break;
-	case '^':
-	    *R1/=4;
-	    break;
-	case '&':
-	    *R2/=4;
-	    break;
-	case '*':
-	    *R3/=4;
-	    break;
-	case '(':
-	    *R0/=4;
-	    *R0=n2(*R0);
-	    break;
-	case ')':
-	    *R1/=4;
-	    *R1=n2(*R1);
-	    break;
-	case '_':
-	    *R2/=4;
-	    *R2=n2(*R2);
-	    break;
-	case '+':
-	    *R3/=4;
-	    *R3=n2(*R3);
-	    break;
-	default:
-	    break;
+        case '%':
+            *R0/=4;
+            break;
+        case '^':
+            *R1/=4;
+            break;
+        case '&':
+            *R2/=4;
+            break;
+        case '*':
+            *R3/=4;
+            break;
+        case '(':
+            *R0/=4;
+            *R0=n2(*R0);
+            break;
+        case ')':
+            *R1/=4;
+            *R1=n2(*R1);
+            break;
+        case '_':
+            *R2/=4;
+            *R2=n2(*R2);
+            break;
+        case '+':
+            *R3/=4;
+            *R3=n2(*R3);
+            break;
+        default:
+            break;
     }
 }
 
@@ -223,6 +223,7 @@ V rd(FILE*f)
 {
     I PC=0;
     wchar_t c;
+    L t=0;
 #define M(x) M[PC]=x
 #define BR PC++;break
     while((c=fgetwc(f))!=EOF)
@@ -331,14 +332,14 @@ V rd(FILE*f)
                     case '@':
                     case '#':
                     case '$':
-		    case '%':
-		    case '^':
-		    case '&':
-		    case '*':
-	            case '(':
-		    case ')':
-		    case '_':
-		    case '+':
+                    case '%':
+                    case '^':
+                    case '&':
+                    case '*':
+                    case '(':
+                    case ')':
+                    case '_':
+                    case '+':
                         rdiv4(c);
                         break;
                     default:
@@ -372,131 +373,132 @@ V rd(FILE*f)
             case ',':
                 Oc(M[PC]);
                 BR;
-	    case '}':
-		M(ror(M[PC]));
-		BR;
-	    case '{':
-		M(rol(M[PC]));
-		BR;
+            case '}':
+                M(ror(M[PC]));
+                BR;
+            case '{':
+                M(rol(M[PC]));
+                BR;
             case '+':
-		c=fgetwc(f);
-		switch(c)
-		{
-		     case '!':
-			*R0+=M[PC];
-			*R0=n4(*R0);
-			BR;
-		     case '@':
-			*R1+=M[PC];
-			*R1=n4(*R1);
-			BR;
-		     case '#':
-			*R2+=M[PC];
-			*R2=n4(*R2);
-			BR;
-		     case '$':
-			*R3+=M[PC];
-			*R3=n4(*R3);
-			BR;
-		     default:
-			break;
-		}
-		break;
-	    case '-':
-		c=fgetwc(f);
-		switch(c)
-		{
-		     case '!':
-			*R0-=M[PC];
-			*R0=n4(*R0);
-			BR;
-		     case '@':
-			*R1-=M[PC];
-			*R1=n4(*R1);
-			BR;
-		     case '#':
-			*R2-=M[PC];
-			*R2=n4(*R2);
-			BR;
-		     case '$':
-			*R3-=M[PC];
-			*R3=n4(*R3);
-			BR;
-		     default:
-			break;
-		}
-		break;
-	    case '>':
-		c=fgetwc(f);
-		switch(c)
-		{
-		    case '!':
-		    	*R0+=5;
-			break;
-		    case '@':
-			*R1+=5;
-			break;
-		    case '#':
-			*R2+=5;
-			break;
-		    case '$':
-			*R3+=5;
-			break;
-		    default:
-			ungetc(c,f);
-			M[getn(f)]=*R3;
-			BR;
-		}
-		break;
-	    case '<':
-		c=fgetwc(f);
-		switch(c)
-		{
-		    case '!':
-		    	*R0-=5;
-			break;
-		    case '@':
-			*R1-=5;
-			break;
-		    case '#':
-			*R2-=5;
-			break;
-		    case '$':
-			*R3-=5;
-			break;
-		    default:
-			ungetc(c,f);
-			*R3=M[getn(f)];
-			BR;
-		}
-		break;
-	    case '\\':
-		c=fgetwc(f);
-		switch(c)
-		{
-		    case '!':
-		    	t=*R0;
-			*R0=*R1;
-			*R1=t;
-			break;
-		    case '@':
-			t=*R1;
-			*R1=*R2;
-			*R2=t;
-			break;
-		    case '#':
-			t=*R2;
-			*R2=*R3;
-			*R3=t;
-			break;
-		    case '$':
-			t=*R3;
-			*R3=*R0;
-			*R0=t;
-			break;
-		}
-		break;
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                        *R0+=M[PC];
+                        *R0=n4(*R0);
+                        BR;
+                    case '@':
+                        *R1+=M[PC];
+                        *R1=n4(*R1);
+                        BR;
+                    case '#':
+                        *R2+=M[PC];
+                        *R2=n4(*R2);
+                        BR;
+                    case '$':
+                        *R3+=M[PC];
+                        *R3=n4(*R3);
+                        BR;
+                    default:
+                        break;
+                }
+		        break;
+            case '-':
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                    *R0-=M[PC];
+                    *R0=n4(*R0);
+                    BR;
+                    case '@':
+                    *R1-=M[PC];
+                    *R1=n4(*R1);
+                    BR;
+                    case '#':
+                    *R2-=M[PC];
+                    *R2=n4(*R2);
+                    BR;
+                    case '$':
+                    *R3-=M[PC];
+                    *R3=n4(*R3);
+                    BR;
+                    default:
+                    break;
+                }
+		        break;
+            case '>':
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                        *R0+=5;
+                        break;
+                    case '@':
+                        *R1+=5;
+                        break;
+                    case '#':
+                        *R2+=5;
+                        break;
+                    case '$':
+                        *R3+=5;
+                        break;
+                    default:
+                        ungetc(c,f);
+                        M[getn(f)]=*R3;
+                        BR;
+                }
+		        break;
+            case '<':
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                        *R0-=5;
+                        break;
+                    case '@':
+                        *R1-=5;
+                        break;
+                    case '#':
+                        *R2-=5;
+                        break;
+                    case '$':
+                        *R3-=5;
+                        break;
+                    default:
+                        ungetc(c,f);
+                        *R3=M[getn(f)];
+                        BR;
+                }
+		        break;
+            case '\\':
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '!':
+                        t=*R0;
+                        *R0=*R1;
+                        *R1=t;
+                        break;
+                    case '@':
+                        t=*R1;
+                        *R1=*R2;
+                        *R2=t;
+                        break;
+                    case '#':
+                        t=*R2;
+                        *R2=*R3;
+                        *R3=t;
+                        break;
+                    case '$':
+                        t=*R3;
+                        *R3=*R0;
+                        *R0=t;
+                        break;
+                }
+		        break;
             case '`':
+                dmp(3);
                 R;
             case '\n':
             case ' ':
