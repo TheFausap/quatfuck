@@ -26,13 +26,13 @@ N.B. Numbers or memory locations are written in little-endian format!
 
 [n]m - repeat m times n
 
-> - increment a register
+> - increment by 1d a register
 
-< - decrement a register
+< - decrement by 1d a register
 
->rn - copy registry value in n
+>n - copy R3 value in n
 
-<rn - copy (n) in registry
+<n - copy (n) in R3
 
 \ - swap adjacent registers
 
