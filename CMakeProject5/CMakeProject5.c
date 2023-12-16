@@ -154,7 +154,7 @@ V rnd(I t)
 
 L getn(FILE*f)
 {
-    /* numbers are written in little endian (?) format */
+    /* numbers are written in little-endian format */
     wchar_t c;
     L r=0;
     L p=1;
@@ -396,6 +396,30 @@ V rd(FILE*f)
 			BR;
 		     case '$':
 			*R3+=M[PC];
+			*R3=n4(*R3);
+			BR;
+		     default:
+			break;
+		}
+		break;
+	    case '-':
+		c=fgetwc(f);
+		switch(c)
+		{
+		     case '!':
+			*R0-=M[PC];
+			*R0=n4(*R0);
+			BR;
+		     case '@':
+			*R1-=M[PC];
+			*R1=n4(*R1);
+			BR;
+		     case '#':
+			*R2-=M[PC];
+			*R2=n4(*R2);
+			BR;
+		     case '$':
+			*R3-=M[PC];
 			*R3=n4(*R3);
 			BR;
 		     default:
