@@ -163,6 +163,7 @@ L i4div(L *dvd, L dvs)
     }
     *dvd+=dvs;
     r=n4(n);
+    *dvd=n4(*dvd);
     
     R r;
 }
@@ -228,9 +229,6 @@ V rdiv4(C c)
         case '+':
             *R3/=4;
             *R3=n2(*R3);
-            break;
-        case '\'':
-            i4div(R0,*R1);
             break;
         default:
             break;
@@ -379,6 +377,9 @@ V rd(FILE*f)
                     case '+':
                         rdiv4(c);
                         break;
+                    case '\'':
+                        *R1=i4div(R0,M[PC]);
+                        BR;
                     default:
                         ungetc(c,f);
                         PC=t2d(getn(f));
