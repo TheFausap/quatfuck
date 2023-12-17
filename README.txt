@@ -44,6 +44,8 @@ N.B. Numbers or memory locations are written in little-endian format!
     N.B.: the normalised result converges/oscillates to/around a couple of values after a specific amount of passes. 
     TODO: understand if there is an algorithm to identify the number of passes!!!
 
+/' - integer I4 divide (R0/R1)
+
 . - print the memory content or registry
 
 , - print the ASC4 value on the screen

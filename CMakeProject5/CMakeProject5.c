@@ -152,6 +152,21 @@ V rnd(I t)
     }
 }
 
+L i4div(L *dvd, L dvs)
+/* integer division return quotient and remainder is in the dvd */
+{
+    L r=0,n=0;
+    
+    for(;*dvd>=0;n++)
+    {
+        *dvd-=dvs;
+    }
+    *dvd+=dvs;
+    r=n4(n);
+    
+    R r;
+}
+
 L getn(FILE*f)
 {
     /* numbers are written in little-endian format */
@@ -213,6 +228,9 @@ V rdiv4(C c)
         case '+':
             *R3/=4;
             *R3=n2(*R3);
+            break;
+        case '\'':
+            i4div(R0,*R1);
             break;
         default:
             break;
