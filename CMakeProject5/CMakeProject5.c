@@ -111,6 +111,38 @@ L n4(L s)
     return r;
 }
 
+L i4sub(L s1, L s2)
+{
+    /* performs s1-s2 */
+    L or=s2,p=1,r=0;
+    I dg2 = log(s2) / log(10);
+    I dg1 = log(s1) / log(10);
+    I d = (dg1>=dg2) ? dg1 : dg2;
+    I l=0,i=d;
+    I d1=0,d2=0;
+    I *dd;
+    L ncr=0, cr=0;
+    
+    dd=calloc(d+1,sizeof(dd));
+    
+    for(;d>=0;i--,d--,s1/=10,s2/=10)
+    {
+        d1=s1%10;d2=s2%10;
+        if(d1<d2) {d1+=10;ncr=1;}
+        else ncr=0;
+        l=d1-d2-cr;
+        cr=ncr; 
+        if((l<4)||(l>7)) l=4+(l%8);
+        dd[i]=l;
+    }
+    i = (dg1>=dg2) ? dg1 : dg2;
+    for(;i>=0;i--,p*=10)
+    {
+        r+=dd[i]*p;
+    }
+    return r;
+}
+
 L r4(L s)
 {
     srand((unsigned int)s);
@@ -405,7 +437,7 @@ V rd(FILE*f)
                     default:
                         ungetc(c,f);
                         Od(M[t2d(getn(f))]);
-                        break;
+                        BR;
                 }
                 break;
             case ',':
@@ -461,8 +493,11 @@ V rd(FILE*f)
                     *R3-=M[PC];
                     *R3=n4(*R3);
                     BR;
-                    default:
+                    case '\'':
+                    *R0=i4sub(*R0,M[PC]);
                     break;
+                    default:
+                        break;
                 }
 		        break;
             case '>':
@@ -483,8 +518,9 @@ V rd(FILE*f)
                         break;
                     default:
                         ungetc(c,f);
-                        M[getn(f)]=*R3;
-                        BR;
+                        t=*R3;
+                        M[getn(f)]=t;
+                        break;
                 }
 		        break;
             case '<':
@@ -506,7 +542,7 @@ V rd(FILE*f)
                     default:
                         ungetc(c,f);
                         *R3=M[getn(f)];
-                        BR;
+                        break;
                 }
 		        break;
             case '\\':
@@ -536,7 +572,22 @@ V rd(FILE*f)
                 }
 		        break;
             case '`':
-                dmp(3);
+                c=fgetwc(f);
+                switch(c)
+                {
+                    case '3':
+                        dmp(3);
+                        break;
+                    case '4':
+                        dmp(4);
+                        break;
+                    case '7':
+                        dmp(4);
+                        dmp(3);
+                        break;
+                    default:
+                        break;
+                }
                 R;
             case '\n':
             case ' ':
